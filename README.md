@@ -18,12 +18,6 @@ This is also intended to act as a personal central hub for all information regar
 
 Optional Hardware includes tripods and corresponing ball mounts for positioning the Base Stations within the flying area. If a portable kit is not desired, the Base Stations can be wall mounted.
 
-## Documentation
-
-[Setup and Flight](docs/setup_and_flight.md)
-
-[FAQ](docs/faq.md)
-
 ## References
 [Bitcraze Website](https://www.bitcraze.io/)
 
