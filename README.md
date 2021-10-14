@@ -18,6 +18,10 @@ This is also intended to act as a personal central hub for all information regar
 
 Optional Hardware includes tripods and corresponing ball mounts for positioning the Base Stations within the flying area. If a portable kit is not desired, the Base Stations can be wall mounted.
 
+## Documentation
+
+[LhPS Area Wiki](https://github.com/stebucur/crazyflie-lhps/wiki)
+
 ## References
 [Bitcraze Website](https://www.bitcraze.io/)
 
