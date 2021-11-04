@@ -120,10 +120,10 @@ def run_shared_sequence(scf):
 
 # Drone URIs
 uris = {
-    #'radio://0/60/2M/E7E7E7E7E7',
-    #'radio://0/80/2M/E7E7E7E7E7',
+    'radio://0/60/2M/E7E7E7E7E7',
+    'radio://0/80/2M/E7E7E7E7E7',
     'radio://1/100/2M/E7E7E7E7E7',
-    #'radio://1/120/2M/E7E7E7E7E7',
+    'radio://1/120/2M/E7E7E7E7E7',
     # Add more URIs if you want more copters in the swarm
 }
 

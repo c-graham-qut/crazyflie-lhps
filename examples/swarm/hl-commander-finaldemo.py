@@ -88,7 +88,7 @@ def activate_mellinger_controller(scf, use_mellinger):
 def run_shared_sequence(scf):
     activate_mellinger_controller(scf, False)
 
-    flight_time = 3
+    flight_time = 5
 
     commander = scf.cf.high_level_commander
 
@@ -101,33 +101,61 @@ def run_shared_sequence(scf):
 
     with keyboard.Listener(on_press=on_press) as listener: # Each thread has a listener
         # Takeoff
-        commander.takeoff(1, 2.0)
+        commander.takeoff(1.0, 2.0)
         time.sleep(3)
 
         # Forwards
-        commander.go_to(1, 0, 0, 0, flight_time, relative=True)
-        time.sleep(flight_time+1)
+        commander.go_to(0.8, 0, 0, 0, flight_time, relative=True)
+        time.sleep(flight_time)
+
+        # Left
+        commander.go_to(0, 0.5, 0, 0, flight_time, relative=True)
+        time.sleep(flight_time)
 
         # Backwards
-        commander.go_to(-1, 0, 0, 0, flight_time, relative=True)
-        time.sleep(flight_time+1)
+        commander.go_to(-0.8, 0, 0, 0, flight_time, relative=True)
+        time.sleep(flight_time)
+
+        # Right
+        commander.go_to(0, 0.5, 0, 0, flight_time, relative=True)
+        time.sleep(flight_time)
+
+        # Down
+        commander.go_to(0, 0, -0.5, 0, flight_time, relative=True)
+        time.sleep(flight_time)
+
+        # Up
+        commander.go_to(0, 0, 1, 0, flight_time, relative=True)
+        time.sleep(flight_time)
+
+        # Down
+        commander.go_to(0, 0, -0.5, 0, flight_time, relative=True)
+        time.sleep(flight_time)
 
         # Forwards
-        commander.go_to(1, 0, 0, 0, flight_time, relative=True)
-        time.sleep(flight_time+1)
+        commander.go_to(0.8, 0, 0, 0, flight_time, relative=True)
+        time.sleep(flight_time)
 
         # 180 Degree Turn
         commander.go_to(0, 0, 0, 3.142, flight_time, relative=True)
-        time.sleep(flight_time+1)
+        time.sleep(flight_time)
+
+        # Left
+        commander.go_to(0, 0.5, 0, 0, flight_time, relative=True)
+        time.sleep(flight_time)
 
         # Backwards
-        commander.go_to(-1, 0, 0, 0, flight_time, relative=True)
-        time.sleep(flight_time+2)
+        commander.go_to(-0.8, 0, 0, 0, flight_time, relative=True)
+        time.sleep(flight_time)
+
+        # Right
+        commander.go_to(0, -0.5, 0, 0, flight_time, relative=True)
+        time.sleep(flight_time)
 
         # 180 Degree Turn
         commander.go_to(0, 0, 0, -3.142, flight_time, relative=True)
-        time.sleep(flight_time+1)
-        
+        time.sleep(flight_time)
+
         # Land
         commander.land(0.0, 2.0)
         time.sleep(2)
@@ -141,8 +169,8 @@ def run_shared_sequence(scf):
 uris = {
     'radio://0/60/2M/E7E7E7E7E7',
     'radio://0/80/2M/E7E7E7E7E7',
-    'radio://1/100/2M/E7E7E7E7E7',
-    'radio://1/120/2M/E7E7E7E7E7',
+    'radio://0/100/2M/E7E7E7E7E7',
+    'radio://0/120/2M/E7E7E7E7E7',
     # Add more URIs if you want more copters in the swarm
 }
 
