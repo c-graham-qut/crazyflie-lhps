@@ -4,6 +4,8 @@ This repository was created to track the development and documentation of a micr
 
 This is also intended to act as a personal central hub for all information regarding the LhPS - documenting personal experiences with the system as well as rewording and fusing togther official documentation. All official Bitcraze documentation can be found referenced throughout.
 
+<img src="https://github.com/stebucur/crazyflie-lhps/blob/main/docs/images/Readme/areaEquipment.jpg" width="750">
+
 ## Software Requirements
 [Crazyflie Client](https://github.com/bitcraze/crazyflie-clients-python)
 
@@ -20,9 +22,7 @@ Optional Hardware includes tripods and corresponing ball mounts for positioning 
 
 ## Documentation
 
-[Setup and Flight](docs/setup_and_flight.md)
-
-[FAQ](docs/faq.md)
+[LhPS Area Wiki](https://github.com/stebucur/crazyflie-lhps/wiki)
 
 ## References
 [Bitcraze Website](https://www.bitcraze.io/)
